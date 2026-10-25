@@ -1,0 +1,5 @@
+[rust_layout]
+contract_crates = ["core_contracts"]
+composition_crates = ["fixture_composed"]
+
+[bevy_layout]

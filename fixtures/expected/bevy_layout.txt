@@ -1,0 +1,12 @@
+bevy_data_too_wide
+bevy_exclusive_system
+bevy_flat_layer
+bevy_layer_dependency
+bevy_misplaced_scene
+bevy_misplaced_type
+bevy_mixed_feature
+bevy_plugin_too_large
+bevy_registration_outside_plugin
+bevy_system_in_data
+bevy_system_write_access
+bevy_unlayered_module

@@ -1,0 +1,27 @@
+[package]
+name = "bevy_layout"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+readme = "../../README.md"
+description = "Dylint lints for Bevy feature, plugin and layer layout."
+keywords = ["dylint", "lints", "clippy"]
+categories = ["development-tools"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+dylint_linting.workspace = true
+lint_support.workspace = true
+serde.workspace = true
+
+[package.metadata.rust-analyzer]
+rustc_private = true
+
+[lints]
+workspace = true

@@ -1,0 +1,7 @@
+layout_crate_dependency
+layout_flat_crate_root
+layout_forbidden_file
+layout_missing_module_doc
+layout_oversized_file
+layout_restricted_visibility
+layout_root_file_logic

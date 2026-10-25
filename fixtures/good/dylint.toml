@@ -1,0 +1,7 @@
+[rust_layout]
+forbidden_file_names = ["data.rs", "components.rs", "systems.rs"]
+max_file_lines = 300
+max_file_lines_by_dir = { data = 200 }
+contract_crates = ["bevy_pbr"]
+
+[bevy_layout]

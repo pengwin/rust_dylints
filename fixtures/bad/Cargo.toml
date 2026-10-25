@@ -1,0 +1,12 @@
+[package]
+name = "fixture_bad"
+version = "0.0.0"
+edition = "2024"
+
+[dependencies]
+bevy_pbr = { path = "../bevy_pbr" }
+
+[dev-dependencies]
+rstest = "0.26"
+
+[workspace]

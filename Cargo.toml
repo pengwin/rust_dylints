@@ -1,0 +1,49 @@
+[workspace]
+resolver = "3"
+members = ["crates/*", "lints/*"]
+# Fixtures are linted by the libraries, never built as members.
+exclude = ["fixtures"]
+
+# The libraries are built, and dogfooded on this repository, by `just lint-arch`.
+[workspace.metadata.dylint]
+libraries = [
+    { path = "lints/rust_layout" },
+    { path = "lints/rust_testing" },
+]
+
+[workspace.lints.rust]
+missing_docs = "warn"
+# `deny`, not `forbid`: Dylint requires a `#[unsafe(no_mangle)]` entry point per library.
+unsafe_code = "deny"
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(dylint_lib, values(any()))'] }
+
+rust_2018_idioms = { level = "deny", priority = -1 } # set priority to not interfere with unsafe_code
+rust_2024_compatibility = { level = "deny", priority = -1 }
+
+[workspace.lints.clippy]
+cargo = { level = "deny", priority = -1 }
+all = "deny"
+pedantic = "deny"
+nursery = "deny"
+multiple_crate_versions = { level = "allow", priority = 1 }
+unwrap_used = "deny"
+expect_used = "deny"
+print_stdout = "deny"
+
+[workspace.package]
+version = "0.0.1"
+edition = "2024"
+rust-version = "1.98.1"
+authors = ["Ivan Kruchkov <820839+pengwin@users.noreply.github.com>"]
+publish = false
+license = "MIT"
+repository = "https://github.com/pengwin/rust_dylints"
+
+[workspace.dependencies]
+dylint_linting = "6.0"
+serde = { version = "1", features = ["derive"] }
+toml = "1"
+lint_support = { path = "crates/lint_support" }
+ignored_paths = { path = "crates/ignored_paths" }
+globset = { version = "0.4", default-features = false }
+rstest = "0.26"

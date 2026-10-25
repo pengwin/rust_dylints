@@ -1,0 +1,9 @@
+[package]
+name = "fixture_composed"
+version = "0.0.0"
+edition = "2024"
+
+[dependencies]
+bevy_pbr = { path = "../bevy_pbr" }
+
+[workspace]

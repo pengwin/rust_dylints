@@ -1,0 +1,3 @@
+# Configuration of the libraries when they lint this repository.
+[rust_layout]
+documented_files = ["mod.rs", "lib.rs"]
