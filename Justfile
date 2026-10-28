@@ -30,7 +30,8 @@ lint package="":
 
 # Dogfooding: rust_layout and rust_testing lint the crates of this repository.
 lint-self:
-    cargo dylint --all --workspace -- --all-targets
+    # Dylint lints warn by default; -D warnings makes a violation fail the recipe.
+    RUSTFLAGS="${RUSTFLAGS:-} -D warnings" cargo dylint --all --workspace -- --all-targets
 
 # nextest over unit tests, then the fixtures.
 test package="":
