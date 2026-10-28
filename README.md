@@ -15,8 +15,11 @@ the lints skip):
 and `tests/` files, and `let` bindings in rstest bodies that call a constructor name or build a struct
 literal. Merging near-identical tests into one `#[case]` test is a review rule (not detectable).
 
-The rules behind `bevy_layout` are described in the `bevy-workspace` skill
-(`docs/BEVY_ARCHITECTURE.md`); this repository holds only the lints.
+The rules behind `bevy_layout` are described in `docs/BEVY_ARCHITECTURE.md` of the `bevy-workspace` skill in
+the [skillz](https://github.com/pengwin/skillz) plugin
+([`templates/docs/BEVY_ARCHITECTURE.md`](https://github.com/pengwin/skillz/blob/main/skills/bevy-workspace/templates/docs/BEVY_ARCHITECTURE.md));
+this repository holds only the lints. The skill also generates a Bevy workspace that already uses them
+(`/plugin marketplace add pengwin/skillz`).
 
 ## Use
 

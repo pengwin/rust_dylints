@@ -2,7 +2,8 @@
 
 Dylint lint libraries for project structure (see README.md): `lints/rust_layout`,
 `lints/rust_testing`, `lints/bevy_layout`, with shared helpers in `crates/lint_support`.
-The rules for the Bevy architecture they enforce live in the `bevy-workspace` skill, not here.
+The rules for the Bevy architecture they enforce live in the `bevy-workspace` skill of the
+[skillz](https://github.com/pengwin/skillz) plugin, not here.
 
 ## Mandatory instruction compliance
 
